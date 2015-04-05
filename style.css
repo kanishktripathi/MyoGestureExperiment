@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  font-family: segoe ui, helvetica neue, helvetica, arial, sans-serif;
+  font-weight: 200;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+body {
+  font-size: 14px;
+}
+
+p {
+  font-size: 90%;
+  line-height: 25px;
+}
+
+/* Wrapper */
+.wrapper {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+/* Window */
+.window {
+	height: 600px;
+	background: url('background.png') 0 -200px;
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.explode {	
+	height:90px;
+	width:90px;
+	background: url('explosion.png');
+	position: absolute;
+	display:none;
+}
+
+/* Score */
+.score {
+  position: absolute;
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-size: 250%;
+  padding-top: 20px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 2px 2px 0 #000;
+  z-index: 4;
+}
+
+/* Bird */
+.bird {
+	height: 100px;
+	width: 100px;
+	background: url('sprite1.png') -263px 5px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 3;
+}
+
+.pig {
+	background: url("sprite1.png") -322px -255px;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+    z-index: 3;
+}
+
+@keyframes birdFlap {  
+  0% {background-position: 0 84px;}
+  100% {background-position: 0 0;}
+}
+
+/* Pipes */
+.pipe {
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	right: -60px;
+	z-index: 2;
+}
+
+.template {
+	display: none;
+}
+
+.pipe.hidden {
+  display: none;
+}
+
+.pipe .topHalf {
+	background: url('http://s21.postimg.org/kyr2rnpzr/pipe.png') bottom;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.pipe .bottomHalf {
+	background: url('http://s21.postimg.org/kyr2rnpzr/pipe.png') top;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
